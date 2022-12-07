@@ -15,17 +15,17 @@ namespace Online_Book_Store.View
 
 
         //Database Con.
-        private SqlConnection con;
-        public void connect()
-        {
-            string newcon = ConfigurationManager.ConnectionStrings["Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\pc\\Documents\\BookStore.mdf;Integrated Security=True;Connect Timeout=30"].ToString();
-            con = new SqlConnection(newcon);
+        //private SqlConnection con;
+        //public void connect()
+        //{
+        //    string newcon = ConfigurationManager.ConnectionStrings["Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\pc\\Documents\\BookStore.mdf;Integrated Security=True;Connect Timeout=30"].ToString();
+        //    con = new SqlConnection(newcon);
 
-        }
+        //}
         protected void Page_Load(object sender, EventArgs e)
         {
-            connect();
-            con.Open();
+            //connect();
+            //con.Open();
 
             if(!IsPostBack)
             {
@@ -37,8 +37,8 @@ namespace Online_Book_Store.View
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            connect();
-            con.Open();
+            //connect();
+            //con.Open();
             SqlCommand cmd = new SqlCommand("dbo.insertBookDetails", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@ISBNNO", SqlDbType.VarChar).Value = txtISBN.Text.Trim();
@@ -86,8 +86,8 @@ namespace Online_Book_Store.View
 
         void LoadRecord()
         {
-            connect();
-            con.Open(); 
+            //connect();
+            //con.Open(); 
             SqlCommand com = new SqlCommand("select*from dbo.Book",con);
             SqlDataAdapter d = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
