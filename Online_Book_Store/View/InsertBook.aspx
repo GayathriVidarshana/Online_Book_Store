@@ -123,9 +123,11 @@
                 <td class="auto-style7">&nbsp;</td>
             </tr>
             <tr>
-                <td></td>
                 <td>
-                    <asp:Button ID="Btn_Save" runat="server" CssClass="auto-style8" Text="Save" Width="63px" /> <%--OnClick="Button1_Click" />--%>
+                    <asp:Label ID="lbl_error_01" runat="server"></asp:Label>
+                </td>
+                <td>
+                    <asp:Button ID="Btn_Save" runat="server" CssClass="auto-style8" Text="Save" Width="63px" OnClick="Btn_Save_Click" /> <%--OnClick="Button1_Click" />--%>
                     <asp:Button ID="Btn_Update" runat="server" CssClass="auto-style8" Text="Update" Width="63px" /> <%--OnClick="ButtonEdit_Click" />--%>
                     <asp:Button ID="Btn_Cancel" runat="server" Text="Cancel" />
                 </td>

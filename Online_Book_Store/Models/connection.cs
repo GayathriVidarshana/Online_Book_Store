@@ -34,7 +34,7 @@ namespace Online_Book_Store.Models
             return dt;
         }
 
-        public int SetDate(string Query)
+        public int SetData(string Query)
         {
             int cnt = 0;
             if (Con.State == ConnectionState.Closed) {
