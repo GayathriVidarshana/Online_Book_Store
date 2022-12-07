@@ -1,0 +1,23 @@
+USE [TESTDB]
+GO
+
+/****** Object:  Table [dbo].[Book]    Script Date: 06/12/2022 4:52:30 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Book](
+	[ISBNNO] [int] NOT NULL,
+	[TITLE] [varchar](50) NOT NULL,
+	[AUTHER] [varchar](50) NOT NULL,
+	[EDITION] [varchar](50) NOT NULL,
+	[PUBLICATION] [varchar](50) NOT NULL,
+	[DESCRIPTION] [varchar](50) NOT NULL,
+	[COPIES] [varchar](50) NOT NULL,
+	[PRICE] [int] NOT NULL
+) ON [PRIMARY]
+GO
+
+

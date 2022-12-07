@@ -1,0 +1,52 @@
+-- ================================================
+-- Template generated from Template Explorer using:
+-- Create Procedure (New Menu).SQL
+--
+-- Use the Specify Values for Template Parameters 
+-- command (Ctrl-Shift-M) to fill in the parameter 
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the procedure.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+Alter PROCEDURE [dbo].[insertBookDetails] 
+	-- Add the parameters for the stored procedure here 
+	@ISBNNO  int,
+	@TITLE Varchar(50),
+	@AUTHER Varchar(50),
+	@EDITION Varchar(50),
+	@PUBLICATION Varchar(50),
+	@DESCRIPTION Varchar(50),
+	@COPIES Varchar(50),
+	@PRICE int
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	  INSERT INTO  Book ( ISBNNO, TITLE, AUTHER, EDITION, PUBLICATION ,DESCRIPTION ,COPIES ,PRICE)
+
+      VALUES 
+	  (
+	     
+	      @ISBNNO,
+		  @TITLE,
+          @AUTHER,
+		  @EDITION,
+		  @PUBLICATION,
+		  @DESCRIPTION,
+		  @COPIES,
+          @PRICE
+	   )
+END
+
